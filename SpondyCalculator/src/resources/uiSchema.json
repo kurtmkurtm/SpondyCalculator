@@ -1,0 +1,21 @@
+{
+  "ui:title": " ",
+  "q1": {
+    "ui:widget": "FloatRange"
+  },
+  "q2": {
+    "ui:widget": "FloatRange"
+  },
+  "q3": {
+    "ui:widget": "FloatRange"
+  },
+  "q4": {
+    "ui:widget": "FloatRange"
+  },
+  "q5": {
+    "ui:widget": "FloatRange"
+  },
+  "q6": {
+    "ui:widget": "TimeRange"
+  }
+}

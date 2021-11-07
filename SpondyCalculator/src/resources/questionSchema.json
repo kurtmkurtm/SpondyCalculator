@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "title": "BASDAI",
+  "properties": {
+    "q1": {
+      "title": "How would you describe the overall level of fatigue/tiredness you have experienced?",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 10.0,
+      "multipleOf" : 0.1
+    },
+    "q2": {
+      "title": "How would you describe the overall level of Ankylosing spondylitis neck, back or hip pain you have had?",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 10.0,
+      "multipleOf" : 0.1
+    }
+    ,
+    "q3": {
+      "title": "How would you describe the overall level of pain/swelling in joints other than your neck, back or hips that you have had?",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 10.0,
+      "multipleOf" : 0.1
+    }
+        ,
+    "q4": {
+      "title": "How would you describe the overall level of discomfort you have had from any areas tender to touch or pressure?",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 10.0,
+      "multipleOf" : 0.1
+    },
+    "q5": {
+      "title": "How would you describe the overall level of morning stiffness you have had from the time you wake up?",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 10.0,
+      "multipleOf" : 0.1
+    },
+    "q6": {
+      "title": "How long does your morning stiffness last from the time you wake up?",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 10.0,
+      "multipleOf" : 0.1
+    }
+  }
+}
