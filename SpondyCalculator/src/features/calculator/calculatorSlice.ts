@@ -1,5 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import _ from 'lodash';
 import { RootState } from '../../app/store';
+import { GetSavedOrDefault, SaveResponse, ZeroScore } from './persistScore';
 import { calculate } from './scoreCalculator';
 
 export interface CalculatorState {
@@ -15,38 +17,15 @@ export interface IResponses {
   q4: number;
   q5: number;
   q6: number;
-};
-
-const SaveKey = "SpondyScore"
-
-function SaveResponse(responses: IResponses) {
-  var reponseString = JSON.stringify(responses);
-  localStorage.setItem(SaveKey, reponseString);
 }
-
-function GetSavedOrDefault(): IResponses {
-  var saved = localStorage.getItem(SaveKey);
-  if (saved) {
-    const parse = JSON.parse(saved);
-    return parse as IResponses;
-  }
-  return zeroScore;
-}
-
-const zeroScore: IResponses = {
-  q1: 0,
-  q2: 0,
-  q3: 0,
-  q4: 0,
-  q5: 0,
-  q6: 0
-};
 
 const initialState: CalculatorState = {
   status: 'idle',
   ResponseValues: GetSavedOrDefault(),
   Score: calculate(GetSavedOrDefault()),
 };
+
+const debouncedSave = _.debounce(SaveResponse, 250, { 'maxWait': 1000 });
 
 export const calculatorSlice = createSlice({
   name: 'calculator',
@@ -57,12 +36,12 @@ export const calculatorSlice = createSlice({
     },
     setResponses: (state, action: PayloadAction<IResponses>) => {
       state.Score = calculate(action.payload);
-      SaveResponse(action.payload);
+      debouncedSave(action.payload);
     },
     resetResponses: (state) => {
       state.Score = 0;
-      state.ResponseValues = { ...zeroScore};
-      SaveResponse(zeroScore);
+      state.ResponseValues = { ...ZeroScore};
+      debouncedSave(ZeroScore);
     },
   },
 });

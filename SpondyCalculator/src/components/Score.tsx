@@ -9,8 +9,8 @@ const scoreStyles: IStackItemStyles = ({
     maxWidth: '768px',
     textAlign: 'center',
     padding: '16px',
-    background: `linear-gradient(290deg,rgb(233 233 233 / 50%),rgb(233 233 233 / 0%))`,
-    boxShadow: DefaultEffects.elevation8
+    background: `linear-gradient(180deg,rgb(233 233 233 / 20%),rgb(233 233 233 / 10%))`,
+    boxShadow: DefaultEffects.elevation64
   }
 });
 
