@@ -13,10 +13,17 @@ const mainApp: IStackItemStyles = {
   }
 };
 
+
 const mainContentStyles: IStackItemStyles = mergeStyleSets({
   root: {
     minHeight: 'calc(100vh - 70px)',
-    maxWidth: '768px'
+    maxWidth: '768px',
+    '@media screen and (min-width: 768px)': {
+      alignItems: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100%'
+    }
   }
 });
 

@@ -13,7 +13,7 @@ const Form = withTheme(FluentUITheme);
 const inputStyles: IStackItemStyles = ({
     root: {
         background: 'rgb(255 255 255 / 80%)',
-        boxShadow: DefaultEffects.elevation8,
+        boxShadow: DefaultEffects.elevation64,
         padding: '48px',
         '@media screen and (max-width: 768px)': { paddingTop: '18px'},
     }
