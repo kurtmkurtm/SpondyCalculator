@@ -7,6 +7,8 @@ Create with React/Redux and Fluent UI
 
 [SpondyCalculator](https://kurtmkurtm.github.io/SpondyCalculator)
 
+![Site Preview](./Docs/SpondyCalculator.png)
+
 ## About
 
 
