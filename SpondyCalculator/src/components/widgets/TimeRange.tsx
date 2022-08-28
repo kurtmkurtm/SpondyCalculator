@@ -80,7 +80,7 @@ const TimeRangeWidget = ({
         snapToStep
         value={value}
         valueFormat={sliderValueFormat}        
-        {...uiProps}
+        {...uiProps as object}
       />
     </>
   );

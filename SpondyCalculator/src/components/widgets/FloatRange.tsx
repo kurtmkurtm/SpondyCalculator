@@ -72,7 +72,7 @@ const FloatRangeWidget = ({
         onChange={_onChange}
         snapToStep
         value={value}
-        {...uiProps}
+        {...uiProps as object}
       />
     </>
   );
